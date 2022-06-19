@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+.header {
+  display: block;
+  max-width: 100%;
+}
+
+.header {
+  .container {
+    display: inline-block;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+.header {
+  .container {
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+  }
+}
+
+.header {
+  .container {
+    .navbar a {
+      color: #000;
+      font-size: 1.5rem;
+      width: calc(100% / 5);
+      text-decoration: none;
+    }
+  }
+}
+
+.header {
+  .container {
+    .navbar {
+      .find-product {
+        position: relative;
+      }
+    }
+  }
+}
+
+.header {
+  .container {
+    .navbar {
+      .find-product input {
+        display: block;
+        padding: 5px;
+        padding-left: 2rem;
+        border-radius: 15px;
+      }
+    }
+  }
+}
+
+.header {
+  .container {
+    .navbar {
+      .find-product button {
+        border: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 5px;
+        background-color: transparent;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+.header {
+  .container {
+    .navbar {
+      .find-product button i {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.header {
+  .container {
+    .navbar {
+      .find-product button:hover {
+        color: red;
+      }
+    }
+  }
+}
+
+.carousel {
+  display: block;
+  max-width: 100%;
+}
+
+.carousel{
+  .title{
+    text-align: center;
+    margin: 5rem;
+  }
+}
+
+.carousel {
+  .container {
+    width: 80%;
+  }
+}
+
+.carousel {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.carousel {
+  .container {
+    .col {
+      width: calc(100%/3);
+      padding: 0 1.5rem;
+      position: relative;
+    }
+  }
+}
+
+.carousel {
+  .container {
+    .col img {
+      display: block;
+      width: 100%;
+      height: 500px;
+    }
+  }
+}
+
+.carousel{
+  .getMore{
+    text-align: center;
+    margin: 1rem;
+    transition: 0.5s;
+  }
+}
+
+.carousel{
+  .getMore *{
+    font-size: 1.7rem;
+    color: blue;
+  }
+}
+
+.carousel{
+  .getMore:hover{
+    color: #fff;
+  }
+}
+
+.introduce{
+  .title{
+    text-align: center;
+    margin: 8rem;
+  }
+}
+
+// .introduce{
+//   .container{
+
+//   }
+// }
