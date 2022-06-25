@@ -19,22 +19,34 @@
   <body>
     <header class="header">
       <div class="container">
-          <div class="row">
+        <div class="row">
+          <div class="col col-right">
             <div class="logo">
-
+              <img src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/3/30bf6c528078ba28d34bc3e37d124bdb.svg" alt="#">
             </div>
-              <nav class="navbar">
-                  <form action="search-engine">
-                      <div class="find-product">
-                          <button id="search-engine"><i class="fa-solid fa-magnifying-glass"></i></button>
-                          <input class="searching" type="text" placeholder="Search Products" />
-                        </div>
-                    </form>
-                    <a class="nav-link active" href="#">Home</a>
-                    <a class="nav-link" href="#">Explore</a>
-                    <a class="nav-link" href="#">Product</a>
-                </nav>
-            </div>
+          </div>
+          <nav class="navbar">
+            <form action="search-engine">
+              <div class="find-product">
+                <button id="search-engine">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input
+                  class="searching"
+                  type="text"
+                  placeholder="Search Products"
+                />
+              </div>
+            </form>
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">Products</a>
+            <a class="nav-link" href="#">About Us</a>
+          </nav>
+          <div class="col col-left">
+            <button onclick="">Log In</button>
+            <button onclick="" id="package"><i class="fa-solid fa-box-open"></i></button>
+          </div>
+        </div>
       </div>
     </header>
 

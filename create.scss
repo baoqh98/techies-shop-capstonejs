@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body{
+  max-width: 1280px;
+}
+
 .header {
   display: block;
   max-width: 100%;
@@ -20,9 +24,10 @@
   .container{
     .row{
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      
+      width: 100%;
+      flex-wrap: nowrap;
     }
   }
 }
@@ -30,8 +35,22 @@
 .header{
   .container{
     .row{
-      .logo{
-        width: calc(100%/4);
+      .col{
+        display: flex;
+        align-items: center;
+        width: 50%;
+      }
+    }
+  }
+}
+
+.header{
+  .container{
+    .row{
+      .navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
