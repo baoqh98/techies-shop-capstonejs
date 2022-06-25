@@ -6,7 +6,12 @@
 
 html,
 body {
+  position: relative;
   font-family: 'Roboto', sans-serif;
   font-size: 62.5%;
-  margin: 0 48px;
+  background: radial-gradient(circle at top, #f7adff, #d2f6ce);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
