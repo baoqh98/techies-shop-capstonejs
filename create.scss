@@ -10,12 +10,12 @@ body{
 
 .header {
   display: block;
-  max-width: 100%;
 }
 
 .header {
   .container {
-    max-width: 100%;
+    width: 100%;
+    padding: 1rem 2rem;
   }
 }
 
@@ -24,7 +24,7 @@ body{
   .container{
     .row{
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       width: 100%;
       flex-wrap: nowrap;
@@ -38,7 +38,7 @@ body{
       .col{
         display: flex;
         align-items: center;
-        width: 50%;
+        width: calc(100%/4);
       }
     }
   }
@@ -49,8 +49,79 @@ body{
     .row{
       .navbar{
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
+      }
+    }
+  }
+}
+
+.header{
+  .container{
+    .row{
+      .navbar a{
+        color: #000;
+        text-decoration: none;
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+
+.header{
+  .container{
+    .row{
+      .navbar a:hover{
+        color: burlywood;
+      }
+    }
+  }
+}
+
+.header{
+  .container{
+    .row{
+      .col-left{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.header{
+  .container{
+    .row{
+      .col-left button{
+        border: transparent;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.header{
+  .container{
+    .row{
+      .col-left{
+        .logIn button{
+          padding: 0.5rem;
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+}
+
+.header{
+  .container{
+    .row{
+      .col-left{
+        .logIn button:hover{
+          color: burlywood;
+          background-color: aquamarine;
+          border-radius: 0.5rem;
+        }
       }
     }
   }
