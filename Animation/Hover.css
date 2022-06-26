@@ -1,0 +1,20 @@
+.header .container .row .navbar a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.header .container .row .navbar a:hover {
+  color: burlywood;
+}
+
+.header .container .row .logIn button {
+  padding: 0.5rem;
+  transition: all 0.5s;
+}
+
+.header .container .row .logIn button:hover {
+  color: burlywood;
+  background-color: aquamarine;
+  border-radius: 0.5rem;
+}/*# sourceMappingURL=Hover.css.map */
