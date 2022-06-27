@@ -2,4 +2,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.header {
+  max-width: 1280px;
+}
+
+.header .container {
+  display: block;
+  max-width: 100%;
 }/*# sourceMappingURL=style.css.map */
