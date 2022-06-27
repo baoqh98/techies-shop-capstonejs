@@ -2,16 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 html,
 body {
   position: relative;
-  font-family: 'Roboto', sans-serif;
   font-size: 62.5%;
   background: radial-gradient(circle at top, #f7adff, #d2f6ce);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  @extend .paraph-m;
 }

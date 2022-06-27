@@ -4,5 +4,11 @@
 // Helpers
 @import './Helpers/variables';
 
+// layout
+@import './Layout/grid';
+
 // theme
 @import './Themes/app.scss';
+
+// components
+@import '../scss/Components/product-list/product-list.scss';
