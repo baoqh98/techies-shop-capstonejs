@@ -15,4 +15,8 @@
 
 .header .navbar a {
   padding: 0 1rem;
+}
+
+.header .logIn button {
+  transition: all 0.5s;
 }/*# sourceMappingURL=style.css.map */
