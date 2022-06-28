@@ -1,0 +1,30 @@
+@import './heading.scss';
+@import '../../Helpers/variables.scss';
+
+.sidebar__wrapper {
+  margin: 32px 0;
+  .sidebar {
+    .sidebar__list {
+      .sidebar__item {
+        .sidebar__link {
+          font-size: $fs-4;
+          padding: 8px 0;
+          color: $color-dark;
+          transition: all ease 0.3s;
+          display: flex;
+          align-items: center;
+          &:hover {
+            color: $color-primary;
+          }
+          span {
+            margin-left: 8px;
+            flex: 1;
+          }
+          i {
+            min-width: 32px;
+          }
+        }
+      }
+    }
+  }
+}

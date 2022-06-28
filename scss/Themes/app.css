@@ -1,5 +1,5 @@
 .color-primary {
-  color: #ad51af;
+  color: #f7adff;
 }
 
 .color-success {
@@ -139,6 +139,6 @@
 }
 
 .app {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   margin: auto;
 }/*# sourceMappingURL=app.css.map */

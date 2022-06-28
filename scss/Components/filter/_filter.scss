@@ -10,4 +10,26 @@
 }
 
 .filter-card {
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  line-height: 2.8rem;
+  font-size: $fs-4;
+  border-radius: 8px;
+  cursor: pointer;
+  .product-filter__selection {
+    padding: 8px 48px 8px 16px;
+    border-radius: 8px;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+  }
+  .product_filter__label {
+    position: absolute;
+    display: block;
+    color: #999;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    cursor: pointer;
+  }
 }
