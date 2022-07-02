@@ -32,6 +32,10 @@ body {
   border-radius: 0.5rem;
 }
 
+.header .container {
+  font-size: 1.8rem;
+}
+
 .color-primary {
   color: #ad51af;
 }
