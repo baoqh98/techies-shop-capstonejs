@@ -1,17 +1,5 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
-html,
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 62.5%;
-  margin: 0 48px;
-}
-
-@import 'Animations/Effects.scss', 'Base/reset', 'Components/Button.scss', 'Custom/position.scss';
+@import './SCSS/Animations/Effects.scss', './SCSS/Base/reset', './SCSS/Components/Button.scss', './SCSS/Custom/position.scss';
 
 .color-primary {
   color: #ad51af;
