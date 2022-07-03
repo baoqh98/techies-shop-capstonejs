@@ -1,0 +1,76 @@
+.header .logo-link {
+  text-decoration: underline;
+}
+.header .logo-link img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  height: 80px;
+}
+
+.header .search {
+  position: relative;
+}
+.header .search button {
+  position: absolute;
+  z-index: 10;
+  padding: 16px;
+  background-color: transparent;
+  border: none;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.header .search input {
+  width: 100%;
+  border: none;
+  padding: 8px 16px 8px 48px;
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .navbar .navbar-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .navbar .navbar-list .nav-link {
+  color: #000;
+  text-decoration: none;
+  transition: all ease 0.3s;
+  font-size: 18px;
+  line-height: 24px;
+}
+.header .navbar .navbar-list .nav-link:hover {
+  color: tomato;
+}
+.header .navbar .account {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .navbar .account button {
+  padding: 8px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .navbar .account button i {
+  font-size: 24px;
+  transition: all ease 0.3s;
+}
+.header .navbar .account button i:hover {
+  color: tomato;
+}
+.header .navbar .account button i:first-child {
+  margin-left: 8px;
+}
+.header .navbar .account button i:last-child {
+  margin-right: 8px;
+}/*# sourceMappingURL=index.css.map */
