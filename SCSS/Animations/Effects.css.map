@@ -1,1 +1,1 @@
-{"version":3,"sources":["Effects.scss","Effects.css"],"names":[],"mappings":"AAGM;EACE,WAAA;EACA,qBAAA;EACA,oBAAA;ACFR;;ADWM;EACE,gBAAA;ACRR;;ADiBM;EACE,eAAA;EACA,oBAAA;ACdR;;ADuBM;EACE,gBAAA;EACA,4BAAA;EACA,qBAAA;ACpBR;;AD2BE;EACA,iBAAA;ACxBF","file":"Effects.css"}
+{"version":3,"sources":["effects.scss","effects.css"],"names":[],"mappings":"AAGM;EACE,WAAA;EACA,qBAAA;EACA,oBAAA;ACFR;;ADWM;EACE,gBAAA;ACRR;;ADiBM;EACE,eAAA;EACA,oBAAA;ACdR;;ADuBM;EACE,gBAAA;EACA,4BAAA;EACA,qBAAA;ACpBR;;AD2BE;EACA,iBAAA;ACxBF","file":"effects.css"}
