@@ -72,13 +72,13 @@ a {
   display: block;
 }
 
-.paraph-s, .product-card .product-body {
+.paraph-s {
   font-size: 1.4rem;
   line-height: 1.96rem;
   display: block;
 }
 
-.paraph-m, a {
+.paraph-m, .product-card .product-body .product-type, a {
   font-size: 1.6rem;
   line-height: 2.24rem;
   display: block;
@@ -228,13 +228,13 @@ a {
   display: block;
 }
 
-.paraph-s, .product-card .product-body {
+.paraph-s {
   font-size: 1.4rem;
   line-height: 1.96rem;
   display: block;
 }
 
-.paraph-m, a {
+.paraph-m, .product-card .product-body .product-type, a {
   font-size: 1.6rem;
   line-height: 2.24rem;
   display: block;
@@ -345,25 +345,44 @@ a {
 }
 
 .product-card {
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-  border-radius: 16px;
-  transition: all ease 0.3s;
-}
-.product-card:hover {
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px 0px;
+  position: relative;
+  height: 360px;
 }
 .product-card .product-card__wrapper {
+  border-radius: 16px;
   padding: 16px;
   display: flex;
   flex-direction: column;
-  height: 280px;
   row-gap: 16px;
+  transition: all ease 0.3s;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.product-card .product-card__wrapper:hover {
+  height: 360px;
+  position: absolute;
+  transform: scale(130%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.product-card .product-card__wrapper:hover .product-body .product-desc {
+  font-size: 12px;
+  overflow: unset;
+  display: block;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: unset;
+  cursor: default;
+}
+.product-card .product-card__wrapper:hover .product-img img {
+  display: none;
 }
 .product-card .product-img {
-  height: 50%;
   overflow: hidden;
   border-radius: 16px;
+  height: 140px;
 }
 .product-card .product-img img {
   display: block;
@@ -371,15 +390,26 @@ a {
   margin-right: auto;
   -o-object-fit: contain;
      object-fit: contain;
-  width: 100%;
+  border-radius: 16px;
   height: 100%;
 }
 .product-card .product-body {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.product-card .product-body .product-type {
   color: #999;
   font-weight: 300;
+}
+.product-card .product-body .product-desc {
+  font-size: 12px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  cursor: default;
 }
 .product-card .product-actions {
   display: flex;
