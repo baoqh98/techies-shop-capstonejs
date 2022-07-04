@@ -1,5 +1,21 @@
 
-@import './SCSS/Animations/Effects.scss', './SCSS/Base/reset', './SCSS/Components/button.scss', './SCSS/Custom/position.scss';
+@import 
+// Position
+'../custom/position.scss', 
+
+// Button
+'../components/button', 
+
+// Reset
+'../base/reset', 
+
+// Animations
+'../animations/effects.scss',
+
+// Variables
+'../helpers/variables';
+
+
 
 .color-primary {
   color: #ad51af;
