@@ -8,6 +8,9 @@
 @import './Layout/grid';
 
 // components
+@import './Components/button.scss';
 @import './Components/side-bar/sidebar.scss';
 @import '../scss/Components/product-list/product-list.scss';
+@import '../scss/Components/cart/cart.scss';
+@import '../scss/Components/cart/cartModal.scss';
 @import '../scss/Components/filter/filter.scss';

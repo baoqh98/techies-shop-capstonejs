@@ -1,0 +1,19 @@
+.cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  &:hover {
+  }
+  span {
+    font-size: 18px;
+    margin-right: 16px;
+  }
+  i {
+    font-size: 32px;
+    color: #ef77fc;
+    box-shadow: rgba(255, 255, 255, 0.15) 0px 5px 15px 0px;
+  }
+}

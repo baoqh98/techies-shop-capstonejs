@@ -41,11 +41,79 @@
     <script type="module" src="./js/index.js" defer></script>
   </head>
   <body>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modelId"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modelTitleId"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Your selected product</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" i>
+            <ul class="cart-list" id="cartList">
+              <li class="cart-item">
+                <div class="item-img">
+                  <img
+                    src="https://cdn.tgdd.vn/Products/Images/42/217536/samsung-galaxy-m51-trang-new-600x600-600x600.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="item-detail">
+                  <p class="item-name">Name</p>
+                  <p class="item-price">1000$</p>
+                </div>
+                <div class="item-action">
+                  <button class="increase">+</button>
+                  <span class="item-quantity">x 1</span>
+                  <button class="descrease">-</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="app">
       <header>
         <div class="wrapper">
-          <div class="container d-flex justify-content-center">
-            <div class="row h6">Header</div>
+          <div class="container">
+            <div class="row h6 justify-content-center">Header</div>
+            <div class="row my-3 justify-content-end">
+              <div class="col-2 d-flex justify-content-end">
+                <div
+                  class="cart"
+                  id="cart"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modelId"
+                >
+                  <span>Your cart</span>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -59,6 +127,8 @@
                     <h1>Explore</h1>
                   </div>
                 </div>
+
+                <!-- Sidebar -->
                 <div class="sidebar__wrapper">
                   <div class="sidebar">
                     <ul class="sidebar__list">
@@ -107,9 +177,9 @@
                               id="productFilter"
                               class="product-filter__selection"
                             >
-                              <option value="">Select product</option>
-                              <option value="iphone">Iphone</option>
-                              <option value="samsung">Samsung</option>
+                              <option value="all">All product</option>
+                              <option value="Iphone">Iphone</option>
+                              <option value="Samsung">Samsung</option>
                             </select>
                           </div>
                         </div>
@@ -119,82 +189,7 @@
                 </section>
 
                 <section class="product-list" id="productList">
-                  <div class="row">
-                    <div class="col-3">
-                      <div class="product-card">
-                        <div class="product-card__wrapper">
-                          <div class="product-img">
-                            <img
-                              src="https://www.att.com/idpassets/global/devices/phones/apple/apple-iphone-13-pro-max/Carousel/alpinegreen/AlpineGreen-1.png"
-                              alt="iphone 1"
-                            />
-                          </div>
-                          <div class="product-info">
-                            <div class="product-heading">
-                              <p>name</p>
-                            </div>
-                            <div class="product-body">
-                              <span class="product-type">type 1</span>
-                              <span class="product-desc"
-                                >Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Odio, minima. Asperiores sequi
-                                cumque unde tempore impedit recusandae
-                                reiciendis veritatis, similique maiores officia
-                                nulla nihil corporis qui illo assumenda quaerat
-                                quibusdam!</span
-                              >
-                            </div>
-                          </div>
-                          <div class="product-actions">
-                            <span class="product-price">$12</span>
-                            <button
-                              class="increase product-btn"
-                              id="addCartBtn"
-                            >
-                              + Add to Cart
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="product-card">
-                        <div class="product-card__wrapper">
-                          <div class="product-img">
-                            <img
-                              src="https://img.freepik.com/free-psd/phone-screen-mockup_53876-76354.jpg?w=2000"
-                              alt="iphone 1"
-                            />
-                          </div>
-                          <div class="product-info">
-                            <div class="product-heading">
-                              <p>name</p>
-                            </div>
-                            <div class="product-body">
-                              <span class="product-type">type 1</span>
-                              <span class="product-desc"
-                                >Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Odio, minima. Asperiores sequi
-                                cumque unde tempore impedit recusandae
-                                reiciendis veritatis, similique maiores officia
-                                nulla nihil corporis qui illo assumenda quaerat
-                                quibusdam!</span
-                              >
-                            </div>
-                          </div>
-                          <div class="product-actions">
-                            <span class="product-price">$12</span>
-                            <button
-                              class="increase product-btn"
-                              id="addCartBtn"
-                            >
-                              + Add to Cart
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <div class="row"></div>
                 </section>
               </div>
             </div>
@@ -216,5 +211,18 @@
       integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      var modelId = document.getElementById('modelId');
+
+      modelId.addEventListener('show.bs.modal', function (event) {
+        // Button that triggered the modal
+        let button = event.relatedTarget;
+        // Extract info from data-bs-* attributes
+        let recipient = button.getAttribute('data-bs-whatever');
+
+        // Use above variables to manipulate the DOM
+      });
+    </script>
   </body>
 </html>
