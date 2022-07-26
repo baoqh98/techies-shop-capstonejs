@@ -17,11 +17,11 @@ const filterProduct = (event) => {
   return filteredProduct;
 };
 
-const renderProductList = (productList) => {
+export const renderProductList = (productList) => {
   let html = '';
-
   productList.forEach((product) => {
-    html += markupProductList(product);
+    const markup = markupProductList(product);
+    html += markup;
   });
 
   productListEl.querySelector('.row').innerHTML = html;
@@ -33,5 +33,5 @@ productFilterSelector.addEventListener('change', function (event) {
   addCart(filteredProduct);
 });
 
-renderProductList(productListData);
 addCart(productListData);
+renderProductList(productListData);

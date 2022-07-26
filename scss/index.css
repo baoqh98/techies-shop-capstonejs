@@ -501,6 +501,7 @@ a {
   display: none;
 }
 .modal-body .cart-list {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 16px 0;
@@ -550,6 +551,16 @@ a {
 .modal-body .cart-list .cart-item .item-action span {
   font-size: 18px;
   font-weight: 500;
+}
+.modal-body .cart-list .total-amount {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.modal-body .cart-list .total-amount span {
+  font-size: 24px;
+  font-weight: 500;
+  color: #50bf3d;
 }
 
 .selection {

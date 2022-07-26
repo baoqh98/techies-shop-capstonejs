@@ -29,9 +29,9 @@ export const markupProductList = (product) => {
             + Add to Cart
           </button>
           <div class="quantity-actions">
-            <button class="quantity-btn" data-type="decrease-btn">-</button>
+            <button class="quantity-btn" data-type="decrease-btn" data-id="${product.id}">-</button>
             <span class="product-quantity" id="itemQuantity-${product.id}">x 1</span>
-          <button class="quantity-btn" data-type="increase-btn">+</button>
+          <button class="quantity-btn" data-type="increase-btn" data-id="${product.id}">+</button>
         </div>
         </div>
       </div>

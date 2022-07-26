@@ -25,6 +25,7 @@
     display: none;
   }
   .cart-list {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 16px 0;
@@ -70,6 +71,16 @@
           font-size: 18px;
           font-weight: 500;
         }
+      }
+    }
+    .total-amount {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      span {
+        font-size: 24px;
+        font-weight: 500;
+        color: $color-success;
       }
     }
   }

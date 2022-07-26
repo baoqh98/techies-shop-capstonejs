@@ -63,7 +63,7 @@
           </div>
           <div class="modal-body" i>
             <ul class="cart-list" id="cartList">
-              <li class="cart-item">
+              <!-- <li class="cart-item">
                 <div class="item-img">
                   <img
                     src="https://cdn.tgdd.vn/Products/Images/42/217536/samsung-galaxy-m51-trang-new-600x600-600x600.jpg"
@@ -79,7 +79,10 @@
                   <span class="item-quantity">x 1</span>
                   <button class="descrease">-</button>
                 </div>
-              </li>
+              </li> -->
+              <div class="total-amount" id="totalAmount">
+                <span>Total amount: $0</span>
+              </div>
             </ul>
           </div>
           <div class="modal-footer">
@@ -90,7 +93,14 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Checkout</button>
+            <button
+              type="button"
+              id="checkoutBtn"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Checkout
+            </button>
           </div>
         </div>
       </div>
