@@ -16,6 +16,7 @@
       crossorigin="anonymous"
     />
 
+    <script type="module" src="./js/index.js" defer></script>
     <!-- Main CSS -->
   </head>
 
@@ -29,23 +30,19 @@
         <li class="nav-item">
           <a
             class="nav-link active"
-            href="#DanhSachSP"
+            href="#productlist"
             role="tab"
             data-toggle="tab"
             >Danh sách sản phẩm</a
           >
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            href="#DanhSachNguoiDung"
-            role="tab"
-            data-toggle="tab"
+          <a class="nav-link" href="#userlist" role="tab" data-toggle="tab"
             >Danh sách người dùng</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#ThongKe" role="tab" data-toggle="tab"
+          <a class="nav-link" href="#dashboard" role="tab" data-toggle="tab"
             >Thống kê</a
           >
         </li>
@@ -59,7 +56,7 @@
             <div class="col-md-8">
               <!-- BEGIN BUTTOM THÊM MỚI -->
               <button
-                id="btnThemSP"
+                id="addProductBtn"
                 class="btn btn-success"
                 data-toggle="modal"
                 data-target="#myModal"
@@ -73,7 +70,7 @@
               <!-- BEGIN TÌM KIẾM -->
               <div class="input-group mb-3">
                 <input
-                  id="inputTK"
+                  id="searchInput"
                   type="text"
                   class="form-control"
                   placeholder="Nhập từ khóa"
@@ -94,14 +91,14 @@
             <!-- BEGIN TABLE NGƯỜI DÙNG -->
             <table class="table table-bordered">
               <thead>
-                <th>STT</th>
-                <th>Tên Sản Phẩm</th>
-                <th>Giá</th>
-                <th>Hình Ảnh</th>
-                <th>Mô Tả</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Description</th>
                 <th>Action</th>
               </thead>
-              <tbody id="tblDanhSachSP"></tbody>
+              <tbody id="productListTable"></tbody>
             </table>
             <!-- END TABLE NGƯỜI DÙNG -->
           </div>
@@ -128,7 +125,7 @@
           <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header">
-              <h4 class="modal-title">Modal Heading</h4>
+              <h4 class="modal-title" id="modalTitle">Modal Heading</h4>
               <button type="button" class="close" data-dismiss="modal">
                 &times;
               </button>
@@ -138,7 +135,7 @@
               <div class="form-group">
                 <label>Tên Sản Phẩm</label>
                 <input
-                  id="TenSP"
+                  id="productName"
                   class="form-control"
                   placeholder="Nhập vào tên sản phẩm"
                 />
@@ -146,7 +143,7 @@
               <div class="form-group">
                 <label>Giá</label>
                 <input
-                  id="GiaSP"
+                  id="productPrice"
                   class="form-control"
                   placeholder="Nhập vào giá"
                 />
@@ -154,7 +151,7 @@
               <div class="form-group">
                 <label>Hình Ảnh</label>
                 <input
-                  id="HinhSP"
+                  id="productImage"
                   class="form-control"
                   placeholder="Nhập vào hình sản phẩm"
                 />
@@ -164,7 +161,7 @@
                 <textarea
                   class="form-control"
                   name=""
-                  id="MoTa"
+                  id="productDesc"
                   cols="30"
                   rows="10"
                   placeholder="Nhập vào mô tả"
@@ -172,7 +169,10 @@
               </div>
             </div>
             <!-- Modal footer -->
-            <div class="modal-footer"></div>
+            <div class="modal-footer" id="modalFooter">
+              <button class="btn btn-primary" id="modalFooterBtn"></button>
+              <button class="btn btn-dark" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
@@ -204,13 +204,5 @@
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/series-label.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
-
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- <script src="./services/SanPhamService.js"></script>
-    <script src="./models/SanPham.js"></script>
-    <script src="./controllers/main.js"></script> -->
-    <script type="module" src="./js/model/getApiProduct.js"></script>
-    <script type="module" src="./js/view/view.js"></script>
-    <script type="module" src="./js/index.js"></script>
   </body>
 </html>

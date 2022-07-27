@@ -14,6 +14,20 @@ import { renderProductList } from './renderProductList.js';
 
 const productData = await getDataFromApi();
 
+const calcTotalAmountHandler = (cart) => {
+  const totalAmount = cart
+    .map((item) => {
+      return item.quantity * item.product.price;
+    })
+    .reduce((previousValue, currentValue) => {
+      return previousValue + currentValue;
+    }, 0);
+
+  cartTotalAmount.querySelector(
+    'span'
+  ).innerHTML = `Total Amount: $${totalAmount}`;
+};
+
 const quantityHandler = () => {
   const increaseBtns = cartListEl.querySelectorAll('.increase');
   const decreaseBtns = cartListEl.querySelectorAll('.decrease');
@@ -33,12 +47,13 @@ const quantityHandler = () => {
       // quantity handler
       increaseHandler(cartItem);
 
-      // render
-      itemCartQuantitySpan.innerHTML = `x ${cartItem.quantity}`;
-
       // updated cart
       cart[cartItemIndex] = cartItem;
       localStorage.setItem('cart', JSON.stringify(cart));
+
+      // render
+      itemCartQuantitySpan.innerHTML = `x ${cartItem.quantity}`;
+      calcTotalAmountHandler(cart);
     });
   });
 
@@ -64,9 +79,6 @@ const quantityHandler = () => {
       // quantity handler
       decreaseHandler(cartItem);
 
-      // render
-      itemCartQuantitySpan.innerHTML = `x ${cartItem.quantity}`;
-
       if (cartItem.quantity === 0) {
         cartListEl.removeChild(cartItemEl);
         return;
@@ -75,6 +87,10 @@ const quantityHandler = () => {
       // updated cart
       cart[cartItemIndex] = cartItem;
       localStorage.setItem('cart', JSON.stringify(cart));
+
+      // render
+      itemCartQuantitySpan.innerHTML = `x ${cartItem.quantity}`;
+      calcTotalAmountHandler(cart);
     });
   });
 };
@@ -91,11 +107,6 @@ const showCartListHandler = (event) => {
 
   // show cart list and amount
   const cartStorage = JSON.parse(localStorage.getItem('cart'));
-  const totalAmount = cartStorage
-    .map((item) => {
-      return item.product.price * item.quantity;
-    })
-    .reduce((previousValue, currentValue) => previousValue + currentValue, 0);
 
   cartStorage.forEach((cartItem) => {
     const markup = markupCartItem(cartItem);
@@ -103,9 +114,7 @@ const showCartListHandler = (event) => {
   });
   quantityHandler();
 
-  cartTotalAmount.querySelector(
-    'span'
-  ).innerHTML = `Total Amount: $${totalAmount}`;
+  calcTotalAmountHandler(cartStorage);
 };
 
 const checkoutHandler = (event) => {
@@ -114,7 +123,7 @@ const checkoutHandler = (event) => {
   productListEl.querySelector('.row').innerHTML = null;
   cartTotalAmount.querySelector('span').innerHTML = `Total Amount: $0`;
   cart.length = 0;
-  // renderProductList(productData);
+  renderProductList(productData);
 };
 
 // close modal and remove list item in cart

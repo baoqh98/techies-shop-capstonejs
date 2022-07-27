@@ -1,37 +1,38 @@
 export const markupProductList = (product) => {
+  const { id, name, price, image, desc, type } = product;
   return `
-  <div class="col-3" data-id="${product.id}">
+  <div class="col-3" data-id="${id}">
     <div class="product-card">
       <div class="product-card__wrapper">
         <div class="product-img">
           <img
-            src="${product.img}"
-            alt="${product.name}"
+            src="${image}"
+            alt="${name}"
           />
         </div>
         <div class="product-info">
           <div class="product-heading">
-            <p>${product.name}</p>
+            <p>${name}</p>
           </div>
           <div class="product-body">
-            <span class="product-type">${product.type}</span>
+            <span class="product-type">${type}</span>
             <span class="product-desc"
-              >${product.desc}</span
+              >${desc}</span
             >
           </div>
         </div>
-        <div class="product-actions" id="actions-${product.id}">
-          <span class="product-price">$${product.price}</span>
+        <div class="product-actions" id="actions-${id}">
+          <span class="product-price">$${price}</span>
           <button
             class="product-btn"
-            data-id="${product.id}"
+            data-id="${id}"
           >
             + Add to Cart
           </button>
           <div class="quantity-actions">
-            <button class="quantity-btn" data-type="decrease-btn" data-id="${product.id}">-</button>
-            <span class="product-quantity" id="itemQuantity-${product.id}">x 1</span>
-          <button class="quantity-btn" data-type="increase-btn" data-id="${product.id}">+</button>
+            <button class="quantity-btn" data-type="decrease-btn" data-id="${id}">-</button>
+            <span class="product-quantity" id="itemQuantity-${id}">x 1</span>
+          <button class="quantity-btn" data-type="increase-btn" data-id="${id}">+</button>
         </div>
         </div>
       </div>

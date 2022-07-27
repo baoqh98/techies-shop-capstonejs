@@ -8,7 +8,6 @@ export const increaseHandler = (cartItem) => {
   );
 
   cartItem.quantity += 1;
-  console.log(cartItem);
 
   itemQuantitySpan.innerHTML = `x ${cartItem.quantity}`;
 
@@ -27,7 +26,6 @@ export const decreaseHandler = (cartItem) => {
   );
 
   cartItem.quantity -= 1;
-  console.log(cartItem);
 
   itemQuantitySpan.innerHTML = `x ${cartItem.quantity}`;
 
@@ -35,7 +33,7 @@ export const decreaseHandler = (cartItem) => {
     quantityActions.querySelector('.product-btn').style.display = 'block';
     quantityActions.querySelector('.quantity-actions').style.display = 'none';
     itemQuantitySpan.innerHTML = `x 1`;
-    console.log(cartItem.product.id);
+
     cart.splice(cartItemIndex, 1);
   }
 
@@ -53,9 +51,6 @@ export const addCart = (productList) => {
 
   addCartBtns.forEach((btn) => {
     btn.addEventListener('click', function (event) {
-      // guard clause
-      if (!event.target) return;
-
       // create product item
       const itemId = event.target.dataset.id;
       const product = productList.find((product) => product.id === itemId);
@@ -68,12 +63,10 @@ export const addCart = (productList) => {
           id: product.id,
           price: product.price,
           name: product.name,
-          image: product.img,
+          image: product.image,
         },
         quantity: 1,
       };
-
-      console.log(isCartItemExist);
 
       if (isCartItemExist) return;
       cart.push(cartItem);

@@ -552,15 +552,14 @@ a {
   font-size: 18px;
   font-weight: 500;
 }
-.modal-body .cart-list .total-amount {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.modal-body .total-amount {
+  text-align: right;
 }
-.modal-body .cart-list .total-amount span {
-  font-size: 24px;
+.modal-body .total-amount span {
+  font-size: 32px;
   font-weight: 500;
   color: #50bf3d;
+  text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.1);
 }
 
 .selection {

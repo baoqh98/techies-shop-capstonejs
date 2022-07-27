@@ -73,15 +73,14 @@
         }
       }
     }
-    .total-amount {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      span {
-        font-size: 24px;
-        font-weight: 500;
-        color: $color-success;
-      }
+  }
+  .total-amount {
+    text-align: right;
+    span {
+      font-size: 32px;
+      font-weight: 500;
+      color: $color-success;
+      text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.1);
     }
   }
 }

@@ -1,11 +1,11 @@
 export const markupCartItem = (item) => {
-  const { name, price, id } = item.product;
+  const { id, name, price, image } = item.product;
   const { quantity } = item;
 
   return `
   <li id='cartItem-${id}' class="cart-item">
     <div class="item-img">
-      <img src="https://cdn.tgdd.vn/Products/Images/42/217536/samsung-galaxy-m51-trang-new-600x600-600x600.jpg" alt="">
+      <img src="${image}" alt="">
     </div>
     <div class="item-detail">
       <p class="item-name">${name}</p>

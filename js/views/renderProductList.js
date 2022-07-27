@@ -25,13 +25,13 @@ export const renderProductList = (productList) => {
   });
 
   productListEl.querySelector('.row').innerHTML = html;
+  addCart(productList);
 };
 
 productFilterSelector.addEventListener('change', function (event) {
   const filteredProduct = filterProduct(event);
   renderProductList(filteredProduct);
-  addCart(filteredProduct);
+  // addCart(filteredProduct);
 });
-
-addCart(productListData);
+// addCart(productListData);
 renderProductList(productListData);

@@ -1,4 +1,4 @@
-import { URL } from '../controller/URL.js';
+import { URL } from '../controller/store/URL.js';
 
 const getApiProducts = async () => {
   try {
