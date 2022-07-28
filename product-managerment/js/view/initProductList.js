@@ -19,8 +19,8 @@ export const initProductsList = async () => {
     const productsData = await getApiProducts();
 
     const products = productsData.map((product) => {
-      const { id, name, price, image, desc } = product;
-      return (product = new ProductItem(id, name, price, image, desc));
+      const { id, name, type, price, image, desc } = product;
+      return (product = new ProductItem(id, name, type, price, image, desc));
     });
 
     renderProductsList(products);
@@ -35,8 +35,6 @@ export const initProductsList = async () => {
     deleteBtnEls.forEach((btn) => {
       btn.addEventListener('click', delProduct);
     });
-
-    console.log('init');
   } catch (error) {
     console.log(error);
   }

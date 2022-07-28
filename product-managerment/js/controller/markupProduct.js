@@ -1,10 +1,11 @@
 export const markupProduct = (product) => {
-  const { id, name, price, image, desc } = product;
+  const { id, name, type, price, image, desc } = product;
 
   return `
   <tr data-id="${id}" id="${id}">
     <td>${id}</td>
     <td>${name}</td>
+    <td>${type}</td>
     <td>$${price}</td>
     <td>
       <img style="

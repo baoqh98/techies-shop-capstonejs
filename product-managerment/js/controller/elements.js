@@ -17,6 +17,14 @@ export const modalFooterBtn = document.getElementById('modalFooterBtn');
 
 // modal input
 export const productNameInp = document.getElementById('productName');
+export const productTypeInp = document.getElementById('productType');
 export const productPriceInp = document.getElementById('productPrice');
 export const productImageInp = document.getElementById('productImage');
 export const productDescInp = document.getElementById('productDesc');
+
+// modal alert
+export const nameAlertSpan = document.getElementById('nameAlert');
+export const typeAlertSpan = document.getElementById('typeAlert');
+export const priceAlertSpan = document.getElementById('priceAlert');
+export const imageAlertSpan = document.getElementById('imageAlert');
+export const descAlertSpan = document.getElementById('descAlert');

@@ -1,2 +1,2 @@
 export const URL =
-  'https://6292f50a7aa3e6af1a029079.mockapi.io/qlsp-api/shop_json';
+  'https://6292f50a7aa3e6af1a029079.mockapi.io/qlsp-api/sampleApi';

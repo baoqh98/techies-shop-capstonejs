@@ -10,8 +10,8 @@ const getSearchProductData = async (query) => {
     const searchedProductsData = await searchApiProduct(query);
 
     const products = searchedProductsData.map((product) => {
-      const { id, name, price, image, desc } = product;
-      return (product = new ProductItem(id, name, price, image, desc));
+      const { id, name, type, price, image, desc } = product;
+      return (product = new ProductItem(id, name, type, price, image, desc));
     });
 
     renderProductsList(products);
