@@ -185,6 +185,17 @@ a {
   background-color: #cf7bc9;
 }
 
+header .header h1 {
+  margin: 16px;
+  text-align: center;
+  font-size: 70px;
+  font-weight: 600;
+  background-image: linear-gradient(to bottom, #ec44ff, #df87e9);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
 .heading-wrapper {
   margin-top: 64px;
 }
@@ -465,7 +476,14 @@ a {
   align-items: center;
   padding: 16px;
   border-radius: 0.75rem;
+  transition: all ease 0.3s;
   cursor: pointer;
+}
+.cart:hover i {
+  color: #f961ef;
+}
+.cart:active {
+  transform: translateY(2px);
 }
 .cart span {
   font-size: 18px;
@@ -475,6 +493,7 @@ a {
   font-size: 32px;
   color: #ef77fc;
   box-shadow: rgba(255, 255, 255, 0.15) 0px 5px 15px 0px;
+  transition: all ease 0.3s;
 }
 
 .modal-dialog {

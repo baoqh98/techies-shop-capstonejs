@@ -4,8 +4,15 @@
   align-items: center;
   padding: 16px;
   border-radius: 0.75rem;
+  transition: all ease 0.3s;
   cursor: pointer;
   &:hover {
+    i {
+      color: #f961ef;
+    }
+  }
+  &:active {
+    transform: translateY(2px);
   }
   span {
     font-size: 18px;
@@ -15,5 +22,6 @@
     font-size: 32px;
     color: #ef77fc;
     box-shadow: rgba(255, 255, 255, 0.15) 0px 5px 15px 0px;
+    transition: all ease 0.3s;
   }
 }
